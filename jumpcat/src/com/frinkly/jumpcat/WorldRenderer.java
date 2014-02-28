@@ -14,7 +14,7 @@ public class WorldRenderer {
     private static final float CAMERA_WIDTH = 12f;
     private static final float CAMERA_HEIGHT = 20f;
 
-    private long fadeTimeAlpha = 1000l;
+    private long fadeTimeAlpha = 800l;
     private long fadeTime = 0l;
 
     private OrthographicCamera cam;
@@ -62,8 +62,7 @@ public class WorldRenderer {
 
     private void drawFlash() {
         if(System.currentTimeMillis() - fadeTime > 0l && System.currentTimeMillis() - fadeTime < fadeTimeAlpha) {
-            spriteBatch.setColor(1.0f, 1.0f, 1.0f, (float) (1000 - (System.currentTimeMillis() - fadeTime))/1000);
-            System.out.println((float) (1000 - (System.currentTimeMillis() - fadeTime))/1000);
+            spriteBatch.setColor(1.0f, 1.0f, 1.0f, (float) (fadeTimeAlpha - (System.currentTimeMillis() - fadeTime))/fadeTimeAlpha);
             spriteBatch.draw(Assets.flashSprite, 0f, 0f, CAMERA_WIDTH * ppuX, CAMERA_HEIGHT * ppuY);
         }
         else if(fadeTime == 0) {
