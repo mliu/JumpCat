@@ -22,7 +22,7 @@ import com.badlogic.gdx.Screen;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
-public class MainMenuScreen implements Screen{
+public class MainMenuScreen implements Screen {
     ImageButton playButton;
     Stage stage;
     SpriteBatch batch;
@@ -33,9 +33,11 @@ public class MainMenuScreen implements Screen{
     }
 
     public void createButtons() {
-        playButton = new ImageButton(Assets.skin.getDrawable("playbutton"), Assets.skin.getDrawable("playbutton-down"));
+        playButton = new ImageButton(Assets.skin.getDrawable("playbutton"),
+                Assets.skin.getDrawable("playbutton-down"));
         playButton.setPosition(40f, 400f);
         playButton.setTransform(true);
+        playButton.setScale(1.5f, 1.5f);
         stage.addActor(playButton);
         Gdx.input.setInputProcessor(stage);
 
@@ -68,13 +70,15 @@ public class MainMenuScreen implements Screen{
     @Override
     public void resize(int width, int height) {
         stage.setViewport(480, 800, true);
-        stage.getCamera().translate(-stage.getGutterWidth(), -stage.getGutterHeight(), 0);
+        stage.getCamera().translate(-stage.getGutterWidth(),
+                -stage.getGutterHeight(), 0);
     }
 
     @Override
     public void show() {
         Assets.loadAssets();
-        stage = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
+        stage = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),
+                true);
         batch = new SpriteBatch();
         this.createButtons();
     }
@@ -96,8 +100,7 @@ public class MainMenuScreen implements Screen{
 
     @Override
     public void dispose() {
-
+        batch.dispose();
     }
-
 
 }

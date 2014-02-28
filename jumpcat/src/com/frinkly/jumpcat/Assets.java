@@ -1,6 +1,5 @@
 package com.frinkly.jumpcat;
 
-
 import com.badlogic.gdx.graphics.Color;
 
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -21,7 +20,6 @@ public class Assets {
 
     public static BitmapFont font;
 
-
     public static void loadAssets() {
         skin = new Skin();
         buttonAtlas = new TextureAtlas(Gdx.files.internal("textures/menu.pack"));
@@ -30,5 +28,11 @@ public class Assets {
         font.setColor(Color.BLACK);
         backgroundSprite = new Sprite(buttonAtlas.createSprite("bg/bg"));
         flashSprite = new Sprite(buttonAtlas.createSprite("bg/flash"));
+    }
+
+    public static void dispose() {
+        buttonAtlas.dispose();
+        skin.dispose();
+        font.dispose();
     }
 }
