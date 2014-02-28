@@ -1,0 +1,100 @@
+
+menu.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+leaderboardbutton
+  rotate: false
+  xy: 124, 2
+  size: 120, 80
+  orig: 120, 80
+  offset: 0, 0
+  index: -1
+leaderboardbutton-down
+  rotate: false
+  xy: 2, 2
+  size: 120, 80
+  orig: 120, 80
+  offset: 0, 0
+  index: -1
+playbutton
+  rotate: false
+  xy: 368, 2
+  size: 120, 80
+  orig: 120, 80
+  offset: 0, 0
+  index: -1
+playbutton-down
+  rotate: false
+  xy: 246, 2
+  size: 120, 80
+  orig: 120, 80
+  offset: 0, 0
+  index: -1
+
+menu2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bg/bg
+  rotate: false
+  xy: 2, 84
+  size: 48, 80
+  orig: 48, 80
+  offset: 0, 0
+  index: -1
+bg/flash
+  rotate: false
+  xy: 2, 2
+  size: 48, 80
+  orig: 48, 80
+  offset: 0, 0
+  index: -1
+
+menu3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+font/font1
+  rotate: false
+  xy: 2, 2
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+menu4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+font/font2
+  rotate: false
+  xy: 2, 2
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+menu5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+font/font3
+  rotate: false
+  xy: 2, 2
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+menu6.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+font/font4
+  rotate: false
+  xy: 2, 2
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1

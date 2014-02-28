@@ -1,0 +1,33 @@
+
+menu.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+leaderboardbutton
+  rotate: false
+  xy: 124, 2
+  size: 120, 80
+  orig: 120, 80
+  offset: 0, 0
+  index: -1
+leaderboardbutton-down
+  rotate: false
+  xy: 2, 2
+  size: 120, 80
+  orig: 120, 80
+  offset: 0, 0
+  index: -1
+playbutton
+  rotate: false
+  xy: 368, 2
+  size: 120, 80
+  orig: 120, 80
+  offset: 0, 0
+  index: -1
+playbutton-down
+  rotate: false
+  xy: 246, 2
+  size: 120, 80
+  orig: 120, 80
+  offset: 0, 0
+  index: -1
