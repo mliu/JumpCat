@@ -62,10 +62,9 @@ public class WorldRenderer {
 
     private void drawFlash() {
         if(System.currentTimeMillis() - fadeTime > 0l && System.currentTimeMillis() - fadeTime < fadeTimeAlpha) {
-            spriteBatch.setColor(1.0f, 1.0f, 1.0f, (float) ((System.currentTimeMillis() - fadeTime) / fadeTimeAlpha));
-            Assets.flashSprite.setSize(CAMERA_WIDTH * ppuX, CAMERA_HEIGHT * ppuY);
-            Assets.flashSprite.draw(spriteBatch);
-            spriteBatch.setColor(1f, 1f, 1f, 1f);
+            spriteBatch.setColor(1.0f, 1.0f, 1.0f, (float) (1000 - (System.currentTimeMillis() - fadeTime))/1000);
+            System.out.println((float) (1000 - (System.currentTimeMillis() - fadeTime))/1000);
+            spriteBatch.draw(Assets.flashSprite, 0f, 0f, CAMERA_WIDTH * ppuX, CAMERA_HEIGHT * ppuY);
         }
         else if(fadeTime == 0) {
             fadeTime = System.currentTimeMillis();
@@ -82,8 +81,6 @@ public class WorldRenderer {
         Assets.font.draw(spriteBatch, Integer.toString(cat.getPoints()),
                 ((CAMERA_WIDTH / 2) - (Assets.font.getBounds(Integer.toString(cat.getPoints())).width/(2*this.ppuX))) * ppuX,
                     17f * ppuY);
-        System.out.println(CAMERA_WIDTH / 2 * ppuX);
-        System.out.println(-(Assets.font.getBounds(Integer.toString(cat.getPoints())).width/(2*this.width)) * ppuX);
     }
 
     private void debugDraw(boolean draw) {

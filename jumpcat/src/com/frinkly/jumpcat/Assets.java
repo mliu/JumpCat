@@ -1,8 +1,8 @@
 package com.frinkly.jumpcat;
 
+
 import com.badlogic.gdx.graphics.Color;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 
